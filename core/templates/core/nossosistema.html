@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+<div class="carousel carousel-slider center">
+    <div class="carousel-fixed-item center">
+        <a class="btn waves-effect teal">Faça Login</a>
+    </div>
+    <div class="carousel-item blue-grey darken-4 teal-text" href="#one!">
+        <h1 class="chamada-carousel">Nosso Sistema</h1>
+        <h5 class="chamada-carousel-2 white-text">Possui dois tipos de contas principais, as contas de
+            Administradoras e Condomínios. Essas contas são independentes e podem se relacionar, assim como
+            acontece na prática entre uma administradora e um condomínio.</h5>
+            
+    </div>
+</div>
+
+<!-- Cards -->
+<div class="container center-align">
+    <div class="row">
+        <div class="box-card col s12 m12 l6">
+            <div class="card-panel grey card-nossosistema lighten-4 darken-4-text">
+                <i class="material-icons">group</i>
+                <h5>Conta do Condomínio</h5>
+                <span class="darken-4-text">O condomínio se cadastra e tem acesso completo a todas as
+                    funcionlidades. Através da sua conta o condomínio pode delegar a sua administração para uma
+                    administradora cadastrada no wCond.
+                </span>
+            </div>
+            <a class="btn waves-effect teal">Cadastre o condomínio</a>
+        </div>
+        <div class="box-card col s12 m12 l6">
+            <div class="card-panel card-nossosistema grey lighten-4 darken-4-text">
+                <i class="material-icons">group</i>
+                <h5>Conta da Administradora</h5>
+                <span class="darken-4-text">
+                    A administradora se cadastra como condomínio, e com sua conta pode cadastrar vários outros
+                    condomínios de forma simples e intuitiva.
+                </span>
+            </div>
+        </div>
+        <a class="btn waves-effect teal">Cadastre a administradora!</a>
+    </div>
+</div>
+{% endblock content %}

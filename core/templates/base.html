@@ -1,0 +1,104 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{% block title %}
+    
+  {% endblock title %}</title>
+  
+  <!-- Material Icon CDN -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Materialize CSS CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+  <!-- css customizado-->
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+  <header>
+    <nav class="blue-grey darken-4">
+      <div class="nav-wrapper">
+        <div class="container">
+          <a href="#" class="brand-logo"><strong>UniCond</strong></a>
+          <a href="#" data-activates="mobile-menu" class="button-collapse"><i class="material-icons">menu</i></a>
+          <ul class="right hide-on-med-and-down">
+              <li><a href="/">Início</a></li>
+              <li><a href="/nossosistema">Nosso Sistema</a></li>
+              <li><a href="/planos">Planos</a></li>
+              <li><a href="#contatos">Contato</a></li>
+              <li><a href="/cadastro">Cadastre-se</a></li>
+              <li><a href="/accounts/login">Login</a></li>
+          </ul>
+          <ul class="side-nav" id="mobile-menu">
+            <li><a href="/">Início</a></li>
+            <li><a href="/nossosistema">Nosso Sistema</a></li>
+            <li><a href="/planos">Planos</a></li>
+            <li><a href="#contatos">Contato</a></li>
+            <li><a href="/cadastro">Cadastre-se</a></li>
+            <li><a href="/login">Login</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+  </header>
+
+  <main>
+    {% block content %}
+      
+    {% endblock content %}
+
+  </main>
+
+  <footer class="page-footer blue-grey darken-4">
+    <div class="container">
+      <div class="row">
+        <div class="col s12 m12 l4">
+          <h5 class="center-align white-text">Sobre Nós</h5>
+          <p class="grey-text text-lighten-4">Acreditamos no que fazemos. Acreditamos que ideias, inovações e
+            criatividade podem mudar a vida das pessoas e do trabalho que elas executam. Entendemos que a tecnologia é
+            um meio fundamental para as empresas atingirem os seus objetivos. Trabalhamos para trazer o que há de melhor
+            em tecnologia da informação para nossos clientes.</p>
+        </div>
+
+        <div class="col s12 m12 l4">
+          <h5 class="white-text center-align">Contatos</h5>
+          <ul class="footer-contatos">
+            <li><i class="material-icons teal-text">contact_phone</i> (61) 3000-3000</li>
+            <li><i class="material-icons teal-text">smartphone</i>(61) 99000-9000</li>
+            <li><i class="material-icons teal-text">email</i> unicond@unicond.com.br</li>
+          </ul>
+        </div>
+
+        <div class="input-field inline center-align col s12 m12 l4">
+            <h5 class="white-text" id="contatos">Receba nossas novidades</h5>
+            <input id="email_inline" type="email" class="validate" placeholder="Email">
+            <button class="btn waves-effect waves-light" type="submit" name="action">Assine
+
+            </button>
+        </div>
+
+      </div>
+    </div>
+    <div class="footer-copyright" id="contatos">
+      <div class="container center-align">
+        © 2019 Trabalho Faculdades Projeção
+      </div>
+    </div>
+  </footer>
+
+  <!-- jQuery CDN -->
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <!-- Materialize JS CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+  <!-- javascript personalizado -->
+  <script type="text/javascript" src="{% static 'js/style.js' %}"></script>
+
+</body>
+
+</html>

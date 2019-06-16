@@ -1,0 +1,96 @@
+{% load static %}
+
+
+{% if user.is_authenticated %}
+
+{% else %}
+
+<ul class="right hide-on-med-and-down">
+    <li><a href="/accounts/login">Sair</a></li>
+
+  </ul>
+{% endif %}
+  
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UniCond</title>
+  <!-- Material Icon CDN -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Materialize CSS CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+  <!-- css customizado-->
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+
+<body>
+  <header>
+    <nav class="blue-grey darken-4">
+      <div class="nav-wrapper">
+        <div class="container">
+          <a href="#" class="brand-logo"><strong>UniCond</strong></a>
+          <a href="#" data-activates="mobile-menu" class="button-collapse"><i class="material-icons">menu</i></a>
+          {% if user.is_authenticated %}
+          <ul class="right hide-on-med-and-down">
+            <li><a href="/accounts/logout">Sair</a></li>
+          </ul>
+          <ul class="side-nav" id="mobile-menu">
+            <li><a href="/accounts/logout">Sair</a></li>
+          </ul>
+          {% endif%}
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <div class="container dash-container">
+    <h1>Lista de Moradores</h1>
+    <a href="novomorador/" class="btn waves-effect waves-light" type="submit" name="action">Adicionar novo usuário
+    </a>
+    <ul class="input-field">
+      {% for dado in dados  %}
+      <li class="input-field">
+        <span><a href="morador/{{ dado.id }}">{{dado.nome}}</a></span>
+
+        <a href="editmorador/{{ dado.id }}"><span class="right"><i class="material-icons">edit</i></span></a>
+        <a href="deletemorador/{{ dado.id }}"><span class="right"><i class="material-icons">delete</i></span></a>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+  
+  {% if messages %}
+
+    <ul class="messages">
+
+      {% for message in messages %}
+
+        
+      {% endfor %}
+
+    </ul>
+
+  {% endif %}
+
+  <footer class="page-footer blue-grey darken-4">
+    <div class="footer-copyright" id="contatos">
+      <div class="container center-align">
+        © 2019 Trabalho Faculdades Projeção
+      </div>
+    </div>
+  </footer>
+  <!-- jQuery CDN -->
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <!-- Materialize JS CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+  <!-- javascript personalizado -->
+  <script type="text/javascript" src="{% static 'js/style.js' %}"></script>
+</body>
+
+</html>
