@@ -24,7 +24,7 @@ SECRET_KEY = 'tf8l(ubpbz%r*koz@3%64qun$bn&!quicly#+dc-*3ju^jrcpe'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ["https://unicond.herokuapp.com/"]
 
 
 # Application definition
