@@ -1,0 +1,80 @@
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    }
+main {
+    flex: 1 0 auto;
+  }
+
+/* nav menu */
+nav {
+    border-bottom: 1px solid #009688;
+}
+.material-icons{
+    size: 1rem;
+}
+
+/* carousel */
+.chamada-carousel{
+    margin-top: 10px;
+}
+
+.chamada-carousel-2{
+    padding: 50px;
+}
+.carousel {
+    margin-bottom: 50px;
+}
+/* cads*/
+.card-home{
+    height: 250px;
+    padding: 10px;
+}
+
+.card-nossosistema{
+    height: 250px;
+    padding: 10px;
+}
+
+
+/* footer */
+.footer-contatos > li{
+    padding: 5px;
+}
+
+.material-icons{
+    margin: 5px;
+}
+
+.footer-copyright{
+    border-top: 1px solid #009688;
+}
+
+/* login */
+
+.box-login{
+    width: 400px;
+    height: 400px;
+    margin-top: 100px;
+    border-radius: 5px;
+    padding: 30px;
+
+}
+
+.botao-login > button{
+    margin: 10px;
+}
+
+
+.cadastro-form{
+    padding: 50px;
+
+}
+
+
+/* Dashboard*/
+
+.dash-container{
+    height: 800px;;
+}

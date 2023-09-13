@@ -1,4 +1,17 @@
+
 mqvirtua
 .vscode
 *.sqlite3
 *pyc
+*.pyc
+__pycache__
+*.log
+*.txt
+*.md
+*.csv
+*.xlsx
+*.pdf
+*.zip
+*.gz
+*.tar
+secrets.sh
